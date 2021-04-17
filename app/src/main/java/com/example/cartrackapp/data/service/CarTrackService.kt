@@ -1,5 +1,6 @@
-package com.example.cartrackapp.data
+package com.example.cartrackapp.data.service
 
+import User
 import android.util.Log
 import com.example.cartrackapp.BuildConfig
 import okhttp3.OkHttpClient
@@ -7,12 +8,11 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface CarTrackService {
 
     @GET("users")
-    suspend fun getUsers()
+    suspend fun getUsers(): Response<List<User>>
 
     companion object {
         fun create(): CarTrackService {
