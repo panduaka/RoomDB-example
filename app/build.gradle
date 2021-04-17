@@ -14,6 +14,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", "\"https://jsonplaceholder.typicode.com/\""
     }
     buildFeatures {
         viewBinding true
@@ -47,5 +48,9 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:$koin_version"
     // Koin AndroidX Jetpack Compose
     implementation "org.koin:koin-androidx-compose:$koin_version"
+
+    def retrofit2_version = "2.6.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
 
 }
