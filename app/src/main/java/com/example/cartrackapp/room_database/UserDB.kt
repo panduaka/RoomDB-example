@@ -8,6 +8,6 @@ import androidx.room.PrimaryKey
 data class UserDB(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "id") val id: Int,
     @ColumnInfo(name = "first_name") val firstName: String,
-    @ColumnInfo(name = "password") val lastName: String,
+    @ColumnInfo(name = "password") val password: String,
     @ColumnInfo(name = "country") val country: String
 )

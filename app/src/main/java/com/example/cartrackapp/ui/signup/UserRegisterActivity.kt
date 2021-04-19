@@ -6,6 +6,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.cartrackapp.R
 import com.example.cartrackapp.room_database.UserDB
 import kotlinx.android.synthetic.main.user_register_activity_layout.*
@@ -34,20 +35,30 @@ class UserRegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             countrySpinner.adapter = adapter
         }
 
+        viewModel.run {
+            onUserRegistered.observe(this@UserRegisterActivity, Observer {
+                if (it) {
+                    Toast.makeText(this@UserRegisterActivity, "User Added Successfully", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this@UserRegisterActivity, "An Error Occurred", Toast.LENGTH_LONG).show()
+                }
+            })
+        }
+
         userRegisterButton.setOnClickListener {
             val userName = userRegisterNameTextview.text.toString()
             val userPassword = userRegisterPasswordTextview.text.toString()
             val userConfirmPassword = userRegisterPasswordConfirmationTextview.text.toString()
 
             if (inputCheck(userName, password = userPassword, confirmPassword = userConfirmPassword)) {
-                viewModel.insertUser(
+                viewModel.onUserRegister.postValue(
                     UserDB(
                         0,
                         userName, userPassword, selectedCountry
                     )
                 )
             } else {
-                Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@UserRegisterActivity, "Please fill out all fields.", Toast.LENGTH_LONG).show()
             }
         }
     }

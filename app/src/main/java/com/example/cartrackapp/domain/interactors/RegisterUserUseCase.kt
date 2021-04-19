@@ -15,7 +15,6 @@ class RegisterUserUseCase(private val userRegisterRepository: UserRegisterReposi
     UseCaseWithParameter<UserDB, LiveData<Result<Boolean>>>, UseCaseScope {
 
     override fun execute(parameter: UserDB): LiveData<Result<Boolean>> {
-
         val result = MutableLiveData<Result<Boolean>>()
         result.postValue(Result.Loading)
         launch {

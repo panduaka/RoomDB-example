@@ -7,7 +7,6 @@ import com.example.cartrackapp.clean_architecture.Result
 
 class MainActivityViewModel(private val getUsersUseCase: GetUsersUseCase) : ViewModel() {
 
-
     //    Inputs
     val onGetUsers = MutableLiveData<Unit>()
 
