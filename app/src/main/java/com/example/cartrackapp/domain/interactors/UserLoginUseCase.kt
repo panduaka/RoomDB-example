@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.cartrackapp.clean_architecture.Response
 import com.example.cartrackapp.domain.repository.LoginRepository
 import com.example.cartrackapp.room_database.UserDB
-import com.example.movieapp.cleanarch.UseCase
+import com.example.cartrackapp.clean_architecture.UseCase
 import com.example.cartrackapp.clean_architecture.*
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch

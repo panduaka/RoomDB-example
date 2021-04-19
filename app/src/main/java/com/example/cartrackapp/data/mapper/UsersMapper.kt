@@ -6,7 +6,7 @@ import com.example.cartrackapp.domain.model.CompanyDomain
 import com.example.cartrackapp.domain.model.GeoDomain
 import com.example.cartrackapp.domain.model.UserDomain
 
-fun getUsers(users: List<DataUser>?): List<UserDomain>? {
+fun getUsers(users: List<DataUser>?): List<UserDomain> {
     val userDomainList = mutableListOf<UserDomain>()
 
     users?.forEach {

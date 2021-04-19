@@ -7,7 +7,7 @@ import com.example.cartrackapp.clean_architecture.Result
 import com.example.cartrackapp.clean_architecture.Response
 import com.example.cartrackapp.domain.repository.UserRegisterRepository
 import com.example.cartrackapp.room_database.UserDB
-import com.example.movieapp.cleanarch.UseCaseWithParameter
+import com.example.cartrackapp.clean_architecture.UseCaseWithParameter
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 

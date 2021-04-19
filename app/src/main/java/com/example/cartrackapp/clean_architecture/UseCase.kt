@@ -1,4 +1,4 @@
-package com.example.movieapp.cleanarch
+package com.example.cartrackapp.clean_architecture
 
 /**
  * A use case that requires no input parameters, yet returns a value.
