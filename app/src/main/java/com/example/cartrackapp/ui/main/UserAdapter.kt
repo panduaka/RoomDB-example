@@ -34,7 +34,7 @@ class UserAdapter(private val onItemClickListener: ((GeoDomain) -> Unit)) :
     override fun getItemCount(): Int = usersList.count()
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val userName: TextView = itemView.userName
+        private val userName: TextView = itemView.userNameTextView
         private val emailTextView: TextView = itemView.emailTextView
         private val addressTextView: TextView = itemView.addressTextView
         private val phoneTextView: TextView = itemView.phoneTextView
