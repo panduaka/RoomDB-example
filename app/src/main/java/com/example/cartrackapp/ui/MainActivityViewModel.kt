@@ -30,11 +30,4 @@ class MainActivityViewModel(private val getUsersUseCase: GetUsersUseCase) : View
             }
         }
     }
-
-//    fun getUsers() {
-//        val result = getUsersUseCase.execute()
-//        if (result is) {
-//
-//        }
-//    }
 }
