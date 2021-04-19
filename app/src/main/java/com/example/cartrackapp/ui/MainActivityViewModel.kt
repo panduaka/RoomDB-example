@@ -3,7 +3,7 @@ package com.example.cartrackapp.ui
 import androidx.lifecycle.*
 import com.example.cartrackapp.domain.interactors.GetUsersUseCase
 import com.example.cartrackapp.domain.model.UserDomain
-import com.example.movieapp.cleanarch.Result
+import com.example.cartrackapp.clean_architecture.Result
 
 class MainActivityViewModel(private val getUsersUseCase: GetUsersUseCase) : ViewModel() {
 

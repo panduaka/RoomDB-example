@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CarTrackApp</string>
     <string name="splash_title">CarTrack</string>
+    <string name="register">Sign Up</string>
 </resources>

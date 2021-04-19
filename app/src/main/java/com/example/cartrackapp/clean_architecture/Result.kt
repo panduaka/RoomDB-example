@@ -1,4 +1,4 @@
-package com.example.movieapp.cleanarch
+package com.example.cartrackapp.clean_architecture
 
 /**
  * Encapsulates the status of an operation with either [Success.data] of T, [Error.exception] or [Loading]

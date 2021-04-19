@@ -1,13 +1,12 @@
 package com.example.cartrackapp.data.mapper
 
-import User
+import com.example.cartrackapp.data.model.DataUser
 import com.example.cartrackapp.domain.model.AddressDomain
 import com.example.cartrackapp.domain.model.CompanyDomain
 import com.example.cartrackapp.domain.model.GeoDomain
 import com.example.cartrackapp.domain.model.UserDomain
 
-
-fun getUsers(users: List<User>?): List<UserDomain>? {
+fun getUsers(users: List<DataUser>?): List<UserDomain>? {
     val userDomainList = mutableListOf<UserDomain>()
 
     users?.forEach {
@@ -48,3 +47,5 @@ fun getUsers(users: List<User>?): List<UserDomain>? {
 
     return userDomainList
 }
+
+
