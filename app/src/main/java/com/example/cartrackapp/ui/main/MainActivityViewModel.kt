@@ -1,4 +1,4 @@
-package com.example.cartrackapp.ui
+package com.example.cartrackapp.ui.main
 
 import androidx.lifecycle.*
 import com.example.cartrackapp.domain.interactors.GetUsersUseCase

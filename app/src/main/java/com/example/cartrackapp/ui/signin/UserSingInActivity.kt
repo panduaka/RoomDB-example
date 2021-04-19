@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.example.cartrackapp.R
-import com.example.cartrackapp.ui.MainActivity
+import com.example.cartrackapp.ui.main.MainActivity
 import com.example.cartrackapp.ui.signup.UserRegisterActivity
 import kotlinx.android.synthetic.main.user_signin_activity_layout.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

@@ -1,4 +1,4 @@
-package com.example.cartrackapp.ui
+package com.example.cartrackapp.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
