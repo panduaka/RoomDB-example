@@ -2,4 +2,10 @@
     <string name="app_name">CarTrackApp</string>
     <string name="splash_title">CarTrack</string>
     <string name="register">Sign Up</string>
+    <string-array name="country_array">
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>United Kingdom</item>
+        <item>Australia</item>
+    </string-array>
 </resources>

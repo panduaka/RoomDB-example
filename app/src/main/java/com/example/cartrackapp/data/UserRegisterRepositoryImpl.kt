@@ -1,7 +1,6 @@
 package com.example.cartrackapp.data
 
 import android.app.Application
-import android.content.Context
 import com.example.cartrackapp.clean_architecture.Response
 import com.example.cartrackapp.domain.repository.UserRegisterRepository
 import com.example.cartrackapp.room_database.AppDatabase

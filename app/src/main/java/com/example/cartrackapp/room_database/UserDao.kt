@@ -10,11 +10,11 @@ import com.example.cartrackapp.clean_architecture.Response
 @Dao
 interface UserDao {
     @Query("SELECT * FROM LoginDetails")
-    fun getAll(): List<UserDB>
+    suspend fun getAll(): List<UserDB>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertUser(user: UserDB)
+    suspend fun insertUser(user: UserDB)
 
     @Query("SELECT * FROM LoginDetails WHERE id IN (:userIds)")
-    fun loadAllByIds(userIds: IntArray): List<UserDB>
+    suspend fun loadAllByIds(userIds: IntArray): List<UserDB>
 }
