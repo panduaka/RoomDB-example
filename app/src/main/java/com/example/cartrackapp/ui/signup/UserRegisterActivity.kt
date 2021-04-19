@@ -1,10 +1,13 @@
 package com.example.cartrackapp.ui.signup
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import com.example.cartrackapp.R
@@ -40,12 +43,16 @@ class UserRegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
             val userPassword = userRegisterPasswordTextview.text.toString()
             val userConfirmPassword = userRegisterPasswordConfirmationTextview.text.toString()
 
-            viewModel.insertUser(
-                UserDB(
-                    0,
-                    userName, userPassword, selectedCountry
+            if (inputCheck(userName, password = userPassword, confirmPassword = userConfirmPassword)) {
+                viewModel.insertUser(
+                    UserDB(
+                        0,
+                        userName, userPassword, selectedCountry
+                    )
                 )
-            )
+            } else {
+                Toast.makeText(this, "Please fill out all fields.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
@@ -55,5 +62,12 @@ class UserRegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
         selectedCountry = countryArray[0]
+    }
+
+    private fun inputCheck(userName: String, password: String, confirmPassword: String): Boolean {
+        return userName.isNotEmpty() && userName.isNotBlank() && password.isNotBlank() && confirmPassword.isNotBlank()
+                && password == confirmPassword
+
+//        return !(TextUtils.isEmpty(userName) && password.isEmpty() && confirmPassword.isEmpty() && password != confirmPassword)
     }
 }
