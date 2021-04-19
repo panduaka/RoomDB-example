@@ -1,15 +1,11 @@
 package com.example.cartrackapp.ui.signup
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
 import com.example.cartrackapp.R
 import com.example.cartrackapp.room_database.UserDB
 import kotlinx.android.synthetic.main.user_register_activity_layout.*
@@ -67,7 +63,5 @@ class UserRegisterActivity : AppCompatActivity(), AdapterView.OnItemSelectedList
     private fun inputCheck(userName: String, password: String, confirmPassword: String): Boolean {
         return userName.isNotEmpty() && userName.isNotBlank() && password.isNotBlank() && confirmPassword.isNotBlank()
                 && password == confirmPassword
-
-//        return !(TextUtils.isEmpty(userName) && password.isEmpty() && confirmPassword.isEmpty() && password != confirmPassword)
     }
 }

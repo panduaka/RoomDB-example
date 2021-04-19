@@ -1,12 +1,11 @@
 package com.example.cartrackapp.ui.splash
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cartrackapp.R
-import android.content.Intent
-import android.widget.Toast
-import com.example.cartrackapp.ui.MainActivity
-import java.lang.Exception
+import com.example.cartrackapp.ui.signin.UserSingInActivity
 
 
 class SplashActivity : AppCompatActivity() {
@@ -17,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 try {
                     sleep((3000).toLong())
-                    val i = Intent(this@SplashActivity, MainActivity::class.java)
+                    val i = Intent(this@SplashActivity, UserSingInActivity::class.java)
                     startActivity(i)
                     finish()
                 } catch (e: Exception) {

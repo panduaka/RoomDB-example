@@ -2,6 +2,7 @@
     <string name="app_name">CarTrackApp</string>
     <string name="splash_title">CarTrack</string>
     <string name="register">Sign Up</string>
+    <string name="sign_in">Sign In</string>
     <string-array name="country_array">
         <item>Singapore</item>
         <item>Malaysia</item>
